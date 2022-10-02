@@ -1,0 +1,69 @@
+*{
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+}
+
+/* Estilos de presentacion*/
+
+#jeder{
+    background: #00000000 !important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#central{
+    height: 100vh;
+    background-image: url(IMAGENES/Central/imagenCentral.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#textoCard{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    margin-left: 50vw;
+}
+
+.boton {
+    margin: 0.5rem;
+    align-items: center;
+    align-self: center;
+    background-color: #00000093;
+    color: white;
+    border: none;
+    font-size: 15px;
+    text-shadow: none;
+    padding: 0.7rem 2rem;
+}
+
+
+/*Media Queris*/
+
+@media screen and (min-width: 480px) and (max-width: 960px){
+  
+    #textoCard{
+        margin-left: 30vw;
+        width: 60vw;
+        justify-content: space-around;
+        align-content: flex-end;
+    }
+
+    #central{
+        background-size:180%;
+        height: 100vh;
+
+    }
+}
+
+/*@media screen and (min-width: 961px) and (max-width: 1200px){
+}
+
+@media screen and (min-width: 1201px){
+}*/
+
+
