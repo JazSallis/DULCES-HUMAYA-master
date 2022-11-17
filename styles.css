@@ -1,69 +1,510 @@
 *{
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+    margin: 0px;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+/* Estilos comunes */
+
+#pag-container{
+    display: flex;
+    flex-direction: column;
+    background: rgb(134,134,134);
+    background: linear-gradient(180deg, rgba(134,134,134,1) 0%, rgba(128,128,128,1) 9%, rgba(94,94,94,1) 40%, rgb(77, 77, 77) 59%, rgba(34,34,34,1) 95%);
 }
 
 /* Estilos de presentacion*/
+header{
+    height: 7rem;
+    position: absolute;
+    width: 100vw;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 12%, rgba(0, 0, 0, 0.701) 40%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
 
-#jeder{
-    background: #00000000 !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#header-ch{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
 
+    top: 0px; /* Hide the navbar 50 px outside of the top view */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+#header-ch a{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
+}
+
+#header-ch a:hover{
+    color: bisque;
+}
+
+#header-ch a img{
+    width: 5rem;
 }
 
 #central{
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
     background-image: url(IMAGENES/Central/imagenCentral.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-#textoCard{
+#card-presentacion{
     width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: flex-end;
-    margin-left: 50vw;
+    align-content: center;
+    align-items: center;
+    margin: 2rem;
+    margin-top: 20vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.66);
 }
 
-.boton {
-    margin: 0.5rem;
-    align-items: center;
-    align-self: center;
+#card-presentacion h3{
+    font-size: 35px;
+}
+
+#card-presentacion p{
+    font-size: 25px;
+    text-align: left;
+    margin: 1.5rem;
+}
+
+#boton-conocenos {
     background-color: #00000093;
     color: white;
-    border: none;
     font-size: 15px;
+    font-weight: bold;
     text-shadow: none;
-    padding: 0.7rem 2rem;
+    border: none;
+    padding: 0.85rem 2rem 0.7rem 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+#boton-conocenos:hover{
+    background-color: #000000b1;
+}
+
+/* productos */
+
+#div-prod{
+    width: 100%;
+    height: 4rem;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: repeat(3, 65vh);
+}
+
+.img-prod{
+    width: 50vw;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#im-p-uno{
+    background-image: url(IMAGENES/Productos/productouno.png);
+    background-position: bottom;
+    
+}
+#im-p-dos{
+    background-image: url(IMAGENES/Productos/productodos.png);
+    background-position: bottom;
+}
+#im-p-tres{
+    background-image: url(IMAGENES/Productos/productotres.png);
+    background-position: bottom;
+}
+#im-p-cuatro{
+    background-image: url(IMAGENES/Productos/productocuatro.png);
+    background-position: 0% 30%;
+}
+
+.card-product{
+    width: 50vw;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.product-title{
+    color: bisque;
+    font-size: 30px;
+    font-weight: lighter;
+    max-width: 80%;
+}
+
+.descrip-prod{
+    max-width: 50%;
+    font-weight: lighter;
+}
+
+.present-prod{
+    color: bisque;
+    max-width: 50%;
+    font-weight: bold;
+}
+
+.btn-info{
+    padding: 0.3rem 1.2rem;
+    background-color: black;
+    border: 2px solid bisque;
+    color: bisque;
+    font-weight: bold;
+}
+
+.btn-info:hover{
+    background-color: bisque;
+    color: black;
+}
+
+#maicenitas{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(190, 149, 99);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+}
+
+#maicenitas div{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#maicenitas div h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(112, 73, 41);
+}
+
+#maicenitas div p{
+    font-weight: lighter;
+}
+
+#maicenitas div p b{
+    color: rgb(112, 73, 41);
+    max-width: 50%;
+    text-align: left;
+}
+
+#maicenitas img{
+    height: 85%;
+}
+
+#maicenitas button{
+    padding: 0.3rem 1.2rem;
+    background-color: rgb(190, 149, 99);
+    border: 2px solid rgb(112, 73, 41);
+    color: rgb(112, 73, 41);
+    font-weight: bold;
+}
+
+#maicenitas button:hover{
+    background-color: rgb(112, 73, 41) ;
+    color: bisque;
+}
+
+/* logos gluten free etc */
+
+#organic{
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#organic h3{
+    font-size: 30px;
+    color: rgb(235, 185, 124);
+}
+
+#organic a{
+    color: rgb(235, 185, 124);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.799);
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.or-logos{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin: 2rem;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.or-logos img{
+    height: 5rem;
+}
+
+.or-logos h6{
+    font-weight: lighter;
+    font-size: 16px;
+    color: black;
+}
+
+/* contacto */
+
+#contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#img-cinco{
+    height: 100%;
+    width: 40vw;
+    background-image: url(IMAGENES/Productos/productocinco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+#div-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60vw;
+    background-color: white;
+}
+
+#div-form h3{
+    color:rgb(112, 73, 41);
+    max-width: 40vw;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+#div-form form{
+    width: 40vw;
+}
+
+#div-form form label{
+    color: rgb(112, 73, 41);
+}
+
+#div-form form label input, textarea{
+    width: 35vw;
+    background-color: rgb(112, 73, 41);
+    color: white;
+    font-weight: lighter;
+}
+
+#btn-enviar{
+    padding: 0.3rem 1.2rem;
+    background-color: white;
+    border: 3px solid rgb(112, 73, 41);
+    color: rgb(112, 73, 41);
+    font-weight: bold;
+}
+
+#btn-enviar:hover{
+    background-color: rgb(112, 73, 41) ;
+    color: bisque;
+}
+
+/* recetas */
+
+#recetas{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+#recetas h2{
+    font-size: 30px;
+}
+
+#recetas h4{
+    font-size: 25px;
+}
+
+#cont-recetas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 70%;
+}
+
+.receta{
+    display: flex;
+    width: 30%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.receta-img{
+    height: 50%;
+    width: 100%;
+}
+
+.receta-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(190, 149, 99);
+    width: 100%;
+    height: 50%;
+}
+
+.receta-card h3{
+    font-weight: lighter;
+    color: rgb(81, 54, 31) ;
+    font-size: 25px;
+}
+
+.receta-card p{
+    font-size: 17px;
+    max-width: 80%;
+}
+
+.receta-card button{
+    padding: 0.3rem 1rem;
+    background-color: rgb(190, 149, 99);
+    border: 2px solid rgb(112, 73, 41);
+    color: rgb(112, 73, 41);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.receta-card button:hover{
+    background-color: rgb(112, 73, 41) ;
+    color: bisque;
+}
+
+#receta1{
+    background-image: url(IMAGENES/Productos/productoseis.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#receta2{
+    background-image: url(IMAGENES/Productos/productosiete.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#receta3{
+    background-image: url(IMAGENES/Productos/productoocho.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+}
+
+footer h3{
+    font-weight: lighter;
+    margin-top: 1rem;
+    color:  rgb(190, 149, 99);
+}
+
+footer div{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer div i{
+    font-size: 25px;
+}
+
+footer a:hover, i:hover{
+    color: rgb(190, 149, 99);
+}
+
+#logo-footer{
+    background-image: url(IMAGENES/Logo/LogoHumaya100x100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 100%;
+    width: 15%;
+}
+
+#map{
+    width: 30%;
+}
+
+#map iframe{
+    width: 70%;
+    height: 60%;
 }
 
 
-/*Media Queris*/
+/*Media Queris
 
-@media screen and (min-width: 480px) and (max-width: 960px){
-  
-    #textoCard{
-        margin-left: 30vw;
-        width: 60vw;
-        justify-content: space-around;
-        align-content: flex-end;
-    }
+@media screen and (max-width:774px) and (min-width:680px){
 
-    #central{
-        background-size:180%;
-        height: 100vh;
+PROXIMAMENTE
 
-    }
 }
 
-/*@media screen and (min-width: 961px) and (max-width: 1200px){
-}
-
-@media screen and (min-width: 1201px){
-}*/
-
+*/
 
